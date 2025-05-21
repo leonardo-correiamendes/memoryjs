@@ -18,3 +18,23 @@ body {
     min-height: 100vh;
     background: #673AB7;
 }
+
+.wrapper {
+    padding: 25px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cards, .card, .view, .details, p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards {
+    height: 350px;
+    width: 350px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
