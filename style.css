@@ -20,6 +20,9 @@ body {
 }
 
 .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 25px;
     background: #f8f8f8;
     border-radius: 10px;
@@ -33,19 +36,20 @@ body {
 }
 
 .cards {
-    height: 350px;
-    width: 350px;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    width: 340px;
+    justify-content: center;
 } 
 
-.cards, .card {
+.card {
     cursor: pointer;
     position: relative;
     perspective: 1000px;
     transform-style: preserve-3d;
-    height: calc(100% / 4 - 10px);
-    width: calc(100% / 4 - 10px);
+    height: 75px;
+    width: 75px;
+    margin: 5px;
 }
 
 .card.shake {
@@ -70,17 +74,33 @@ body {
     }
 }
 
-.cards, .card, .view i {
-    width: 100%;
-    height: 100%;
+.cards, .card {
     user-select: none;
-    pointer-events: none;
-    position: absolute;
+    position: relative;
     background: #fff;
     border-radius: 7px;
     backface-visibility: hidden;
     transition: transform 0.25s linear;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.view {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 7px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s linear;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.view i {
+    font-size: 30px;
+    user-select: none;
 }
 
 .card .back-view i {
@@ -100,20 +120,26 @@ body {
 }
 
 .details {
-    width: 100px;
-    margin-top: 15px;
-    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* espace entre les éléments */
+    margin-top: 20px;
     background: #fff;
-    border-radius: 7px;
-    height: calc(100% / 4 - 30px);
-    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .details p {
     font-size: 18px;
-    height: 17px;
-    padding-right: 18px;
+    margin: 0;
     border-right: 1px solid #ccc;
+    padding-right: 15px;
+}
+
+.details p:last-of-type {
+    border-right: none;
 }
 
 .details p span {
@@ -125,11 +151,11 @@ body {
 }
 
 .details button {
-    cursor: pointer;
+    margin-left: 10px;
     font-size: 14px;
     color: #673AB7;
-    border-radius: 4px;
-    padding: 4px 11px;
+    border-radius: 5px;
+    padding: 5px 12px;
     background: #fff;
     border: 2px solid #673AB7;
     transition: 0.3s ease;
@@ -173,7 +199,7 @@ body {
     .details {
         margin-top: 10px;
         padding: 0 15px;
-        height: calc(100% / 4 - 20px);
+        height: 50px;
     }
 
     .details p {
