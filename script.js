@@ -20,10 +20,10 @@ function initTimer() {
 }
 
 function flipCard({target}) {
-    console.log("Card clicked:", clickedCard); // AJOUTE ICI
+    console.log("Card clicked:"); // AJOUTE ICI
     const clickedCard = target.closest(".card")
     if(!clickedCard || clickedCard.classList.contains("flip")) return;
-    
+
     if(!isPlaying) {
         isPlaying = true;
         timer = setInterval(initTimer, 1000)
