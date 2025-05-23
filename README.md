@@ -19,7 +19,7 @@ Un petit jeu de memory (jeu de cartes à retourner) développé en **HTML, CSS e
 
 1. Clone ce dépôt :
    ```bash
-   git clone https://github.com/ton-pseudo/memory-game.git
+   git clone https://github.com/leonardo-correiamendes/memoryjs.git
    ```
 
 2. Ouvre simplement le fichier `index.html` dans ton navigateur.
